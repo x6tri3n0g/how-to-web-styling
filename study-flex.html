@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Study Flexbox</title>
+
+        <style>
+            body {
+                width: 1024px;
+                margin: 0 auto;
+                padding: 250px 0;
+                font-size: 14px;
+            }
+            section {
+                margin: 150px 0;
+            }
+            p {
+                padding: 20px;
+            }
+            span {
+                color: #333;
+                font-weight: bold;
+                background-color: orange;
+                border-radius: 2px;
+                padding: 10px;
+                margin: 20px;
+            }
+            li {
+                padding: 10px;
+            }
+            .flex-container {
+                margin: 10px;
+                padding: 15px;
+                border-radius: 5px;
+                background: #60b99a;
+            }
+
+            .flex-item {
+                margin: 10px;
+                padding: 20px;
+                color: #fff;
+                text-align: center;
+                border-radius: 5px;
+                background: #4584b1;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Flexbox</h1>
+        <section>
+            <h2>1. Introduce</h2>
+            <p>
+                Flexbox는 모던 웹을 위해 제안된 세련된 layout 방식이다.<br />
+                요소의 사이즈가 불명확하거나 동적으로 변화할 때에도 유연한 레이아웃을 실현할 수 있어
+                복잡한 레이아웃이라도 적은 코드로 보다 간결하게 표현이 가능하다.
+            </p>
+            <div class="flex-container">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+                <div class="flex-item">4</div>
+                <div class="flex-item">5</div>
+            </div>
+            <p>
+                <strong>div태그는 block요소이며 수직정렬이다.</strong><br />
+                이를 수평정렬하려면 자식요소(flex-item)를 inline-block으로 지정하거나 float
+                프로퍼티를 지정한다.
+            </p>
+            <div class="flex-container">
+                <div class="flex-item" style="display: inline-block;">1</div>
+                <div class="flex-item" style="display: inline-block;">2</div>
+                <div class="flex-item" style="display: inline-block;">3</div>
+                <div class="flex-item" style="float: left">4</div>
+                <div class="flex-item" style="float: left">5</div>
+            </div>
+            <p>
+                이때 각 자식 요소를 부모 요소 내에서 정렬하기 위해서는 각 자식 요소의 너비를 %로
+                지정하는 등 번거로운 처리가 필요하다.<br />
+                자식 요소의 사이즈가 불명확하거나 동적으로 변화할 때에는 더욱 처리가 복잡해진다.
+                grid를 사용할 수 도 있으나 이 또한 새로운 학습이 필요하고 라이브러리를 로드해야하는
+                번거로움이 존재한다.<br /><br />
+                Flexbox를 사용하여 위 예제를 부모 요소 내에서 균등하게 수평 정렬해보자. 부모
+                요소에는 <br />.flex-container{ display: flex; justify-content: space-around; }
+                <br />를 입력한다.
+            </p>
+            <p>
+                이와 같이 Flexbox를 사용하면 기존 방식에 비해 매우 간단히 레이아웃을 처리할 수 있다.
+            </p>
+            <div class="flex-container" style="display: flex; justify-content: space-around;">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+                <div class="flex-item">4</div>
+                <div class="flex-item">5</div>
+            </div>
+            <p>
+                Flexbox의 장점을 정리해 보면 아래와 같다.
+            </p>
+            <ul>
+                <li>
+                    1줄의 코드 추가로 수평정렬이 가능하다.
+                </li>
+                <li>
+                    요소의 상하좌우 정렬, 순서 변경이 가능하다.
+                </li>
+                <li>
+                    요소가 간격 조절이 가능하다.
+                </li>
+                <li>
+                    서로 다른 height를 갖는 요소의 수평정렬 시, 간단한 상하 중앙 정렬이 가능하다.
+                </li>
+            </ul>
+            <p>
+                비교적 최신 브라우저가 아니면 벤더 프리픽스를 사용하여야 하고 IE계열은 IE8,9의 경우
+                지원하지 않고 IE10,11의 경우도 일부 지원하므로 주의가 필요하다. IE계열에서 Flexbox를
+                사용하기 위해서는 <a href="https://jonneal.dev/flexibility/">flexibility.js</a>를
+                사용하면 편리하다. <br /><br />
+                브라우저의 지원 상황은 <a href="https://caniuse.com/#feat=flexbox">caniuse</a>를
+                참고한다.
+            </p>
+        </section>
+
+        <section>
+            <h2>2. Usage</h2>
+            <p>
+                Flexbox 레이아웃은 flex item이라 불리는 복수의 자식 요소와 이들을 내포하는
+                flex-container 부모 요소로 구성된다.
+            </p>
+            <img
+                src="https://poiemaweb.com/img/CSS3-Flexbox-Model.jpg"
+                alt=""
+                style="width: 800px; margin: 0 auto;"
+            />
+            <p>
+                flex를 사용하기 위해서 HTML 부모 요소의 display 속성에서 flex를 지정한다.
+            </p>
+            <p>// display: flex;</p>
+            <div class="flex-container" style="display: flex;">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+                <div class="flex-item">4</div>
+                <div class="flex-item">5</div>
+            </div>
+            <br />
+            <p>// display: inline-flex;</p>
+            <div class="flex-container" style="display: inline-flex;">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+                <div class="flex-item">4</div>
+                <div class="flex-item">5</div>
+            </div>
+            <p>
+                <strong>
+                    flex 또는 inline-flex는 부모 요소에 반드시 지정해야하는 유일한 속성이며
+                    자식요소는 자동적으로 flex item이 된다.
+                </strong>
+            </p>
+        </section>
+
+        <section>
+            <h2>3. Flexbox container 속성</h2>
+            <br />
+            <h3>3.1 flex-direction</h3>
+            <p>
+                flex-direction 속성은 flex 컨테이너의 주축(main axis)방향을 설정한다.(즉,
+                수평배치냐? 수직배치냐?)
+            </p>
+            <br />
+            <span>flex-direction: row;</span>
+            <br />
+        </section>
+    </body>
+</html>
