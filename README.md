@@ -5,19 +5,19 @@
 ## 1. Introduce  
 ## 2. Usage  
 ## 3. Flexbox Container 속성  
-  ### .1 flex-direction  
-  ### .2 flex-wrap  
-  ### .3 flex-flox  
-  ### .4 justify-content  
-  ### .5 align-items  
-  ### .6 align-content  
+  ### 3.1 flex-direction  
+  ### 3.2 flex-wrap  
+  ### 3.3 flex-flox  
+  ### 3.4 justify-content  
+  ### 3.5 align-items  
+  ### 3.6 align-content  
 ## 4. Felxbox item 속성  
-  ### .1 order  
-  ### .2 flex-grow  
-  ### .3 flex-shrink  
-  ### .4 flex-basis  
-  ### .5 flex
-  ### .6 align-self  
+  ### 4.1 order  
+  ### 4.2 flex-grow  
+  ### 4.3 flex-shrink  
+  ### 4.4 flex-basis  
+  ### 4.5 flex
+  ### 4.6 align-self  
 ## 5. Flexbox playground
 
 ##### Reference  
@@ -28,8 +28,6 @@
   
   
   # study-flex
-...incomplete
-
 
 ## 1. Introduce  
   Flexbox는 모던 웹을 위해 제안된 기존 layout보다 더 세련된 방식의 니즈에 부합하기 위한 CSS3의 새로운 방식의 layout 방식이다.  
@@ -94,9 +92,9 @@ flex 또는 inline-flex는 부모 요소에서 반드시 지정해야하는 유�
   
 ---
 ## 3. Flexbox Container 속성  
-  ### .1 flex-direction  
+  ### 3.1 flex-direction  
   flex-direction 속성은 flex 컨테이너의 주축(main axis)방향을 설정한다.
-  ==flex-dirction: row;==
+  flex-dirction: row;
   좌에서 우로(ltr; left to right) 수평 배치된다. flex-direction 속성의 기본값이다.
 ```
 .flex-container {
@@ -127,7 +125,7 @@ flex 또는 inline-flex는 부모 요소에서 반드시 지정해야하는 유�
 }
 ```
   
-  ### .2 flex-wrap  
+  ### 3.2 flex-wrap  
   **flex-wrap** 속성은 flex container의 복수 flex item을 **1행**으로 또는 **복수행**으로 배치한다. flex-wrap 속성은 flex container의 width보다 flex item들의 width의 합계가 더 큰 경우, 한줄로 표현할 것인지, 여러줄로 표현할 것인지를 지정한다.  
   
   ==flex-wrap: nowrap;==  
@@ -158,7 +156,7 @@ flex 또는 inline-flex는 부모 요소에서 반드시 지정해야하는 유�
 }
 ```  
   
-  ### .3 flex-flox  
+  ### 3.3 flex-flox  
   flex-flow 속성은 flex-direction 속성과 flex-wrap 속성을 설정하기 위한 shorthand이다. default는 row nowrap이다.  
 ```
 .flex-container {
@@ -166,7 +164,7 @@ flex 또는 inline-flex는 부모 요소에서 반드시 지정해야하는 유�
 }
 ```  
   
-  ### .4 justify-content  
+  ### 3.4 justify-content  
   flex container의 main axis(주축)를 기준으로 flex item을 수평 정렬한다.  
   
   ==justify-content: flex-start;==  
@@ -219,7 +217,7 @@ flex 또는 inline-flex는 부모 요소에서 반드시 지정해야하는 유�
 ```  
   
   
-  ### .5 align-items  
+  ### 3.5 align-items  
   flex item을 flex container의 수직 방향(cross axis)으로 정렬한다. align-items 속성은 모든 flex item(하위 요소)에 적용된다.  
   
   ==align-items: strech;==  
@@ -273,7 +271,7 @@ align-items: baseline;
 ```  
   
   
-  ### .6 align-content  
+  ### 3.6 align-content  
   flex container의 cross axis를 기준으로 flex item을 수직으로 정렬한다.  
   참고로 justify-content 속성은 flex container의 main axis를 기준으로 flex item을 수평 정렬한다.  
   
@@ -344,7 +342,7 @@ align-items: baseline;
 float, clear, vertical-align 속성은 flex item에 영향을 주지 않는다.  
   
   
-  ### .1 order  
+  ### 4.1 order  
   flex item의 배치 순서를 지정한다.  
   HTML 코드를 변경하지 않고 order 속성값을 지정하는 것으로 간단히 재배치할 수 있다. 기본 배치 순서는 flex container에 추가된 순서이다. 기본값은 0이다.  
   
@@ -356,7 +354,7 @@ float, clear, vertical-align 속성은 flex item에 영향을 주지 않는다.
   정수값에 따른 순서를 부여한다. -1, -2,...도 가능하다.
   
   
-  ### .2 flex-grow  
+  ### 4.2 flex-grow  
   flex item의 너비에 대한 확대 인자(flex grow factor)를 지정한다. 기본값은 0이고 음수값은 무효하다.  
   
 ```
@@ -368,7 +366,7 @@ float, clear, vertical-align 속성은 flex item에 영향을 주지 않는다.
   두번째 flex item의 flex-grow 속성값을 3으로 지정하면 다른 flex item보다 더 넓은 너비를 갖는다.  
   
   
-  ### .3 flex-shrink  
+  ### 4.3 flex-shrink  
   flex item의 너비에 대한 축소 인자(flex shrink factor)를 지정한다. 기본값은 1이고 음수값은 무효하다. 0을 지정하면 축소가 해제되어 원래의 너비를 유지한다.  
   
 ```
@@ -380,7 +378,7 @@ float, clear, vertical-align 속성은 flex item에 영향을 주지 않는다.
   기본적으로 모든 flex item은 축소된 상태로 지정(default: 1)하고 두번째 flex item만 축소를 해제(flex-shrink: 0;)하면 원래의 너비를 유지한다.  
   
   
-  ### .4 flex-basis  
+  ### 4.4 flex-basis  
   flex item의 너비 기본값을 px, % 등의 단위로 지정한다. 기본값은 auto이다.  
   
 ```
@@ -389,7 +387,7 @@ float, clear, vertical-align 속성은 flex item에 영향을 주지 않는다.
 }
 ```  
   
-  ### .5 flex  
+  ### 4.5 flex  
   flex-grow, flex-shrink, flex-basis 속성의 shorthand이다. 기본값은 0 1 auto이다.  
   W3C에서는 이 속성을 사용하는 것보다 개별적으로 기술하는 것을 추천하고 있다.  
   
@@ -399,7 +397,7 @@ float, clear, vertical-align 속성은 flex item에 영향을 주지 않는다.
 }
 ```  
   
-  ### .6 align-self  
+  ### 4.6 align-self  
   align-items 속성(flex container 속성으로 flex item을 flex container의 수직방향(cross axis)으로 정렬한다.) 보다 우선하여 개별 flex item을 정렬한다.(default: auto)  
   
 ```
