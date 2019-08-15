@@ -1,26 +1,28 @@
 # study-flex
-...incomplete
 
+### #CONTENT  
 
-## 1. Introduce  
-## 2. Usage  
-## 3. Flexbox Container 속성  
-  ### 3.1 flex-direction  
-  ### 3.2 flex-wrap  
-  ### 3.3 flex-flox  
-  ### 3.4 justify-content  
-  ### 3.5 align-items  
-  ### 3.6 align-content  
-## 4. Felxbox item 속성  
-  ### 4.1 order  
-  ### 4.2 flex-grow  
-  ### 4.3 flex-shrink  
-  ### 4.4 flex-basis  
-  ### 4.5 flex
-  ### 4.6 align-self  
-## 5. Flexbox playground
+### 1. Introduce  
+### 2. Usage  
+### 3. Flexbox Container 속성  
+  #### 3.1 flex-direction  
+  #### 3.2 flex-wrap  
+  #### 3.3 flex-flox  
+  #### 3.4 justify-content  
+  #### 3.5 align-items  
+  #### 3.6 align-content  
+### 4. Felxbox item 속성  
+  #### 4.1 order  
+  #### 4.2 flex-grow  
+  #### 4.3 flex-shrink  
+  #### 4.4 flex-basis  
+  #### 4.5 flex
+  #### 4.6 align-self  
+### 5. Flexbox playground
 
-##### Reference  
+### Reference  
+  
+  
   
   
   
