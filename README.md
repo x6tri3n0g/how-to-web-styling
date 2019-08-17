@@ -10,9 +10,14 @@
   ### 3. Section & Aside & Footer  
   
   ### Reference  
-  
+    
+      
+      
+      
   ---  
-  
+    
+    
+    
   
   일반적인 layout에는 몇가지 문제를 가진다. 그 문제를 해결할 열쇠는 Responsive Web Design이다.  
   
