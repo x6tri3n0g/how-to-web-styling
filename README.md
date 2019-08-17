@@ -74,7 +74,111 @@
   
   
   ## 1.2 @media  
+  @media는 서로 다른 미디어 타입(print, screen...)에 따라 각각의 styles을 지정하는 것을 가능하게 한다. 다음은 일반 화면(screen)과 인쇄 장치 별로 다른 style을 지정하는 예이다.  
   
+  ```  
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @media screen {
+      * { color: red; }
+    }
+    @media print {
+      * { color: blue; }
+    }
+  </style>
+</head>
+<body>
+  <h1>@media practice</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</body>
+</html>
+  ```  
+  
+  반응형 웹디자인에 사용되는 핵심 기술은 ==@media==이다.  
+  
+  ==@media==을 사용하여 미디어 별로 style을 지정하는 것을 ==Media Query==라 한다. 디바이스를 지정하는 것 뿐만 아니라 디바이스의 크기나 비율까지 구분할 수 있다.  
+  
+  ```
+  @media not|only mediatype and (expressions) {
+	CSS-Code;
+  }
+  ```
+  ```
+  @media screen and (min-width: 480px) {
+  	body {
+    	background-color: lightgreen;
+    }
+  }
+  ```  
+  
+  |Property|Description|
+  |-|-|
+  |width|viewport 너비(px)|
+  |height|viewprot 높이(px)|
+  |device-width|디바이스의 물리적 너비(px)|
+  |device-height|디바이스의 물리적 높이(px)|
+  |orientation|디바이스 방향(가로 방향: landscape, 세로 방향: portrait)|
+  |device-aspect-ratio|디바이스의 물리적 width/height 비율|
+  |color|디바이스에서 표현 가능한 최대 색상 비트|
+  |monochrome|흑백 디바이스의 픽셀 당 비트 수|
+  |resolution|디바이스 해상도|  
+  
+  orientation을 제외한 모든 프로퍼티는 min/max 접두사를 사용할 수 있다.  
+  일반적으로 반응형 웹 디자인은 viewport 너비(width 프로퍼티)를 기준으로 한다.  
+  viewport의 width 프로퍼티를 이용하여 viewport 너비에 따라 반응하는 범위(break point)를 지정할 수 있다.  
+  
+  ```
+/*==========  Mobile First Method  ==========*/
+/* All Device */
+
+/* Custom, iPhone Retina : 320px ~ */
+@media only screen and (min-width : 320px) {
+
+}
+/* Extra Small Devices, Phones : 480px ~ */
+@media only screen and (min-width : 480px) {
+
+}
+/* Small Devices, Tablets : 768px ~ */
+@media only screen and (min-width : 768px) {
+
+}
+/* Medium Devices, Desktops : 992px ~ */
+@media only screen and (min-width : 992px) {
+
+}
+/* Large Devices, Wide Screens : 1200px ~ */
+@media only screen and (min-width : 1200px) {
+
+}
+
+/*==========  Non-Mobile First Method  ==========*/
+/* All Device */
+
+/* Large Devices, Wide Screens : ~ 1200px */
+@media only screen and (max-width : 1200px) {
+
+}
+/* Medium Devices, Desktops : ~ 992px */
+@media only screen and (max-width : 992px) {
+
+}
+/* Small Devices, Tablets : ~ 768px */
+@media only screen and (max-width : 768px) {
+
+}
+/* Extra Small Devices, Phones : ~ 480px */
+@media only screen and (max-width : 480px) {
+
+}
+/* Custom, iPhone Retina : ~ 320px */
+@media only screen and (max-width : 320px) {
+
+}
+  ```  
   ## 2. Responsive Navigation Bar  
   ### 2.1 Responsive Navigation Bar - Tablet  
   ### 2.2 Responsive Navigation Bar - Smartphone  
