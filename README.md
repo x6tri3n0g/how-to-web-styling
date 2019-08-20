@@ -1274,6 +1274,8 @@ article:nth-of-type(n+3) {
     </div>
   </body>
 </html>
-  ```
+  ```  
+  
+  
   ## Reference 
-  (Media queries)[https://quirksmode.org/css/mediaqueries/mobile.html]
+  [Media queries](https://quirksmode.org/css/mediaqueries/mobile.html)
