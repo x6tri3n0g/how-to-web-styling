@@ -10,14 +10,17 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+const Card = styled.div`
+    background-color: red;
+`;
+
 const Container = styled.div`
     width: 100%;
     height: 100vh;
     background-color: pink;
-`;
-
-const Card = styled.div`
-    background-color: white;
+    ${Card}:last-child {
+        background-color: blue;
+    }
 `;
 
 const Button = styled.button`
@@ -26,21 +29,25 @@ const Button = styled.button`
     background-color: ${(props) => props.theme.successColor};
 `;
 
+const Form = () => (
+    <Card>
+        <Button>Hello</Button>
+    </Card>
+);
+
 function App() {
     return (
         <ThemeProvider theme={theme}>
             <Container>
                 <GlobalStyle />
                 <Form />
+                <Form />
+                <Form />
+                <Form />
+                <Form />
             </Container>
         </ThemeProvider>
     );
 }
-
-const Form = () => (
-    <Card>
-        <Button>Hello</Button>
-    </Card>
-);
 
 export default App;
