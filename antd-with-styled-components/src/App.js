@@ -10,8 +10,11 @@ const styles = {
     fontFamily: 'sans-serif',
     textAlign: 'center',
     padding: 10,
+    display: 'flex',
+    flexDirection: 'column',
 };
 
+// Antd Button + styled-components
 const StyledButton = styled(Button)`
     color: palevioletred;
     font-weight: normal;
@@ -38,7 +41,7 @@ const StyledButton = styled(Button)`
         display: block;
     }
 `;
-
+// Antd Checkbox + styled-components
 const StyledCheckbox = styled(Checkbox)`
     .ant-checkbox-input:focus + .ant-checkbox-inner,
     .ant-checkbox-wrapper:hover .ant-checkbox-inner,
@@ -70,10 +73,17 @@ const StyledCheckbox = styled(Checkbox)`
 const App = () => {
     return (
         <div style={styles}>
+            <h3>Styled Button</h3>
             <StyledButton>test</StyledButton>
+            <br />
+            <h3>None Styled Button</h3>
             <Button>test</Button>
-            <Checkbox>Checkbox</Checkbox>
+            <br />
+            <h3>Styled Checkbox</h3>
             <StyledCheckbox>StyledCheckbox</StyledCheckbox>
+            <br />
+            <h3>None Styled Checkbox</h3>
+            <Checkbox>Checkbox</Checkbox>
         </div>
     );
 };
