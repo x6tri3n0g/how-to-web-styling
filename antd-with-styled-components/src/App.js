@@ -41,6 +41,7 @@ const StyledButton = styled(Button)`
         display: block;
     }
 `;
+
 // Antd Checkbox + styled-components
 const StyledCheckbox = styled(Checkbox)`
     .ant-checkbox-input:focus + .ant-checkbox-inner,
